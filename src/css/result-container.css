@@ -1,0 +1,118 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.result-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Lato',sans-serif;
+    flex-direction: column;
+    background-color: rgb(95, 180, 219);    
+}
+
+.result-container{
+    display: grid;
+    row-gap: 30px;
+    box-shadow: 0px 0px 2px 2px rgb(95, 180, 219);
+    border-radius: 10px;
+    width: 1000px;
+    padding: 30px;
+    margin-bottom: 100px;
+    /* background-color: rgb(189, 236, 255); */
+    background-color: #fff;
+
+}
+
+.intro{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.common-container{
+    padding: 10px;
+    display: grid;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__name{
+    font-size: 24px;
+    padding: 10px;
+}
+
+.main__photo{
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.main__description{
+    padding: 30px;
+    font-size: 16px;
+}
+
+.weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather__properties{
+    list-style: none;
+    padding: 0;
+}
+.weather__overlook{
+    font-size: 38px;
+}
+
+.weather__icon{
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+} 
+
+.weather__property{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.weather__temp{
+    font-size: 18px;
+}
+
+.weather__desc{
+    font-style: italic;
+}
+
+.places__list{
+    list-style: none;
+}
+
+.places__list-element{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.places__header{
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+.bad-request{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 48px;
+}
