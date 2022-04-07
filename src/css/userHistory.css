@@ -1,0 +1,44 @@
+.user-history-container{
+    background: linear-gradient(180deg, #21a3f7 0%, #4444FF 100%);
+    padding-bottom: 100px;
+}
+
+.user-history-item {
+    color: #21a3f7;
+    font-size: 25px;
+ }
+
+.user-history-header{
+    font-size: 50px;
+    text-align: center;
+}
+
+.user-history-table{
+    width: 80%;
+    text-align: center;
+    margin: 30px auto 0;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+.user-history-table th {
+    padding: 20px;
+}
+
+.user-history-item td{
+    padding: 10px;
+    border-top: 1px solid #21a3f7;
+    border-bottom: 1px solid #21a3f7;
+}
+
+.user-history-table td > button {
+    padding: 8px;
+    border: 1px solid black;
+    color: #fff;
+    font-size:20px;
+    background-color: #21a3f7;
+    margin: 8px;
+}

@@ -1,0 +1,122 @@
+
+.result-wrapper {
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    min-height: 100vh;
+}
+
+.result-main {
+    position: relative;
+    z-index: 1;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, #7ee2f8 100%)
+}
+
+.result-main-description {
+    width: 50%;
+    padding: 30px;
+}
+
+.results-main-header {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.result-main-plane {
+    position: relative;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-image: url('/src/image/plane.png');
+    background-size: contain;
+    background-position: center center;
+}
+
+.result-main-cloud {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-image: url('/src/image/cloud.png');
+    background-position: center center;
+    background-size: contain;
+}
+
+.result-main-anim-wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 500px;
+    height: 400px;
+}
+
+.result-main-photo {
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.result-main-title {
+    text-align: center;
+    margin: 30px;
+}
+
+.result-main-description-direct {
+    line-height: 1.5;
+}
+
+.result-trips {
+    width: 100%;
+    background: linear-gradient(180deg, #7ee2f8 0%, #00FEEF 80%);
+    min-height: 60vh;
+}
+
+.result-trips-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.result-trips-content {
+    margin: 100px auto 0;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.result-trips-map-container {
+    padding: 30px;
+    background-color: #00FEEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-trips-map-header {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.result-weather-container {
+    background: linear-gradient(180deg, #00FEEF 0%, #21a3f7 100%);
+}
+
+.result-weather-header{
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-costs-header{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.result-costs-wrapper{
+    background-color: #7ee2f8;
+    padding: 20px 0 50px;
+}

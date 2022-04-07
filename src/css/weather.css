@@ -1,0 +1,36 @@
+.weather-container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: 400px;
+}
+
+.weather-item {
+    border-radius: 15px;
+    border: 1px solid #fff;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-item-icon {
+    width: 100%;
+    height: 150px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.weather-item-text{
+    padding: 3px;
+    font-size: 16px;
+}
+
+.weather-item-title{
+    font-size: 24px;
+}

@@ -1,17 +1,18 @@
-@import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.result-wrapper{
+@import-normalize;
+
+.result-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     flex-direction: column;
-    background-color: rgb(95, 180, 219);    
+    background-color: rgb(95, 180, 219);
 }
 
-.result-container{
+.result-container {
     display: grid;
     row-gap: 30px;
     box-shadow: 0px 0px 2px 2px rgb(95, 180, 219);
@@ -23,13 +24,13 @@
 
 }
 
-.intro{
+.intro {
     margin: 0 auto;
     margin-bottom: 10px;
     font-size: 35px;
 }
 
-.common-container{
+.common-container {
     padding: 10px;
     display: grid;
     box-shadow: 0px 0px 2px 2px #ccc;
@@ -37,78 +38,79 @@
     background-color: rgb(255, 255, 255);
 }
 
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.main__name{
+.main__name {
     font-size: 24px;
     padding: 10px;
 }
 
-.main__photo{
+.main__photo {
     width: 400px;
     height: 300px;
     background-size: cover;
     background-position: center;
 }
 
-.main__description{
+.main__description {
     padding: 30px;
     font-size: 16px;
 }
 
-.weather{
+.weather {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.weather__properties{
+.weather__properties {
     list-style: none;
     padding: 0;
 }
-.weather__overlook{
+
+.weather__overlook {
     font-size: 38px;
 }
 
-.weather__icon{
+.weather__icon {
     height: 90px;
     background-position: center;
     background-size: cover;
-} 
+}
 
-.weather__property{
+.weather__property {
     margin-top: 10px;
     text-align: center;
 }
 
-.weather__temp{
+.weather__temp {
     font-size: 18px;
 }
 
-.weather__desc{
+.weather__desc {
     font-style: italic;
 }
 
-.places__list{
+.places__list {
     list-style: none;
 }
 
-.places__list-element{
+.places__list-element {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.places__header{
+.places__header {
     padding: 30px;
     padding-bottom: 10px;
 }
 
-.bad-request{
+.bad-request {
     display: flex;
     justify-content: center;
     align-items: center;
