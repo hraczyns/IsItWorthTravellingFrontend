@@ -98,8 +98,8 @@ const SubmitResults = (history) => {
         }
         return <section className={"result-main-description"}>
             <div className={"result-main-photo"} style={{
-                backgroundImage: `url(${data?.simpleWebResult.url})`,
-                height: data?.simpleWebResult.url ? '300px' : '15px'
+                backgroundImage: `url(${data?.simpleWebResult?.url})`,
+                height: data?.simpleWebResult?.url ? '300px' : '15px'
             }}/>
             <h2 className={"result-main-title"}>{data?.placeName}</h2>
             <div
