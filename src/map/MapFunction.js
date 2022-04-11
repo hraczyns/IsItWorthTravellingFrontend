@@ -5,6 +5,7 @@ import '../css/global.css';
 import {useHistory} from 'react-router-dom';
 import PolygonWithText from "../common/PolygonWithText";
 import MapLegend from "./MapLegend";
+import {useCookies} from "react-cookie";
 
 const WARSAW_LOCALIZATION = [52.237, 21.017];
 
@@ -14,12 +15,24 @@ const getPlacesMarkers = (places) => {
     });
 }
 
-const MapFunction = ({initCoords, places = []}) => {
-    initCoords = initCoords && initCoords.map(el => parseFloat(el));
-    const [map, setMap] = useState(null);
+const getLastVisited = (cookie) => {
+    const history = cookie?.userHistory;
+    if (history) {
+        const userHistory = history[history.length - 1];
+        if (userHistory) {
+            return userHistory.split("=")[1].split(";").reverse();
+        }
+    }
+    return WARSAW_LOCALIZATION;
+}
 
+const MapFunction = ({initCoords, places = [], isFinder}) => {
+    initCoords = initCoords && initCoords.map(el => parseFloat(el));
+    const [cookie] = useCookies("userHistory");
+    const [map, setMap] = useState(null);
+    const center = isFinder ? getLastVisited(cookie) : initCoords;
     return (
-        <MapContainer center={initCoords || WARSAW_LOCALIZATION} zoom={13} scrollWheelZoom={true} whenCreated={setMap}>
+        <MapContainer center={center} zoom={13} scrollWheelZoom={true} whenCreated={setMap}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -5,21 +5,23 @@ import {useHistory} from "react-router-dom";
 
 const MAX_LENGTH = 10;
 
-const UserHistory = ({placeName, latLng, timestamp, onNavigateClick}) => {
+const UserHistory = ({placeName, latLng, onNavigateClick}) => {
     const [cookies, setCookie] = useCookies(["userHistory"]);
     const history = useHistory();
     useEffect(() => {
         if (placeName) {
-            const value = `${placeName}=${latLng.lng};${latLng.lat}=${timestamp.replace("T", " ")}`;
+            const date = new Date().toLocaleString();
+            const value = `${placeName}=${latLng.lng};${latLng.lat}=${date}`;
             const userHistory = cookies?.userHistory || [];
             while (userHistory.length >= MAX_LENGTH) {
                 userHistory.shift();
             }
-            if (userHistory.every(v => v.split("=")[2] !== timestamp)) {
+            if (userHistory.every(v => v.split("=")[2] !== date)) {
                 setCookie("userHistory", [...userHistory, value]);
             }
         }
-    }, [cookies?.userHistory, latLng.lat, latLng.lng, placeName, setCookie, timestamp])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [latLng.lat, latLng.lng, placeName, setCookie])
 
     const getValues = () => {
         const values = cookies?.userHistory || [];
@@ -38,7 +40,8 @@ const UserHistory = ({placeName, latLng, timestamp, onNavigateClick}) => {
                     <button onClick={() => {
                         onNavigateClick && onNavigateClick();
                         history.push("/results", {lat: lat, lng: lng})
-                    }}>Navigate</button>
+                    }}>Navigate
+                    </button>
                     <button onClick={() => deleteItem(i)}>Delete</button>
                 </td>
             </tr>

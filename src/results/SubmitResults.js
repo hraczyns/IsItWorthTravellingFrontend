@@ -178,7 +178,7 @@ const SubmitResults = (history) => {
             <UserHistory onNavigateClick={() => {
                 setLoadingMain(true);
                 setLoadingPlaces(true);
-            }} placeName={data?.placeName} latLng={latLng} timestamp={data?.timestamp}/>
+            }} placeName={data?.placeName} latLng={latLng}/>
         </article>
     </main>
 }

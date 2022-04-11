@@ -3,7 +3,7 @@ import MapFunction from "./MapFunction";
 
 const MapFinder = () => {
     return <main className={"leaflet-container-wrapper"}>
-        <MapFunction/>
+        <MapFunction isFinder={true}/>
     </main>
 }
 
